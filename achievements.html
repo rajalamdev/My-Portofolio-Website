@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Raj Alam's achievements">
+    <meta name="utf" charset="UTF-8">
+    <meta name="compatible" http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Alam's Achievements</title>
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+
+    <!-- link to css -->
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        header {z-index: 1; padding: 20px 60px;}
+        header a {color: var(--heading-color); font-size: 18px; font-weight: 600; transition: .2s;}
+        header span {padding-left: 5px;}
+        header a:hover {transform: translateX(-5px); opacity: .8;}
+
+        @media screen and (max-width: 512px) {
+            header {padding: 20px}
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-ach">
+        <a href="index.html"><i class="fa-solid fa-angle-left"></i><span>Back</span></a>
+    </header>
+    <main class="main-achievements">
+        <ul class="container-achievements">
+            <li><img src="./assets/img/achievments/achievement-1.webp" alt="certificate" class="achieve-img"></li>
+            <li><img src="./assets/img/achievments/achievement-2.webp" alt="certificate" class="achieve-img"></li>
+            <li><img src="./assets/img/achievments/achievement-3.webp" alt="certificate" class="achieve-img"></li>
+            <li><img src="./assets/img/achievments/achievement-4.webp" alt="certificate" class="achieve-img"></li>
+            <li><img src="./assets/img/achievments/achievement-5.webp" alt="certificate" class="achieve-img"></li>
+            <li><img src="./assets/img/achievments/achievement-6.webp" alt="certificate" class="achieve-img"></li>
+            <li><img src="./assets/img/achievments/achievement-7.webp" alt="certificate" class="achieve-img"></li>
+        </ul>
+        <div class="modal">
+            <div class="container-img">
+                <i class="fa-solid fa-xmark fa-2xl close-modal-btn"></i>
+                <img src="./assets/img/achievments/achievement-1.webp" alt="certificate" class="modal-img">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://github.com/rajalamofficial" target="_blank" class="github"><i class="fa-brands fa-github fa-xl"></i><span>rajalamofficial</span></a>
+        <p>&copy; <span class="copyright-year"></span> - Raj Alam. All Rights Reserved.</p>
+    </footer>
+    
+    <section class="alert">
+        <p><span>Info!</span> This Website Currently Under Development.</p>
+        <section class="close-btn">Understand <span id="understand">5</span></section>
+    </section>
+
+    <script>
+        
+        document.addEventListener('scroll', () => {
+            const headerAch = document.querySelector(".header-ach");
+
+            if(headerAch.offsetTop > 3) {
+                headerAch.classList.add('border');
+            } else {
+                headerAch.classList.remove('border');
+            }
+        })
+      
+    </script>
+    <script type="module" src="./assets/script/main.js"></script>
+</body>
+</html>
