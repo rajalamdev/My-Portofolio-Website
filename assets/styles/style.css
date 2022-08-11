@@ -297,14 +297,15 @@ header .nav-desktop .nav-links li .theme {
     position: absolute;
     cursor: pointer;
     z-index: 9999;
+    transition: .2s linear;
 }
 
 header .nav-desktop .nav-links li .theme.light {
-    animation: rotate .2s linear;
+    animation: rotate .2s linear forwards;
 }
 
 header .nav-desktop .nav-links li .theme.dark {
-    animation: reverse-rotate .2s linear;
+    animation: reverse-rotate .2s linear forwards;
 }
 
 /* --------------------------------- navbar mobile (header) --------------------------------------- */
@@ -426,6 +427,7 @@ header .nav-mobile .sidebar li .anchor-mobile:hover {
 
 header .nav-mobile .sidebar li .anchor-mobile.btn {
     color: var(--white);
+    transition: .2s linear;
 }
 
 header .nav-mobile .sidebar li .anchor-mobile.btn::after {
@@ -438,11 +440,11 @@ header .nav-mobile .sidebar li .theme-mobile {
 }
 
 header .nav-mobile .sidebar li .theme-mobile.light {
-    animation: rotate .2s linear;
+    animation: rotate .2s linear forwards;
 }
 
 header .nav-mobile .sidebar li .theme-mobile.dark {
-    animation: reverse-rotate .2s linear;
+    animation: reverse-rotate .2s linear forwards;
 }
 
 .sidebar-bg {

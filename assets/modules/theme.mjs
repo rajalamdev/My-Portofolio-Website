@@ -1,27 +1,23 @@
-import { themeBtn, themeMobileBtn } from "./variable.mjs";
+import * as Var from "./variable.mjs";
 
 let lightMode = localStorage.getItem('light');
 
-if(lightMode === 'enabled'){
+if(lightMode == 'enabled'){
     enableLightMode();
 }
 
 function enableLightMode() {
-    document.body.classList.add('light');
     lightMode = localStorage.setItem('light', 'enabled');
-    try {
-        themeBtn.src = 'assets/img/icons-sun.webp';
-        themeMobileBtn.src = 'assets/img/icons-sun.webp';
-    } catch (error) {
-        return error;
-    }
+    Var.body.className = 'light';
+    Var.themeBtn.src = 'assets/img/icons-sun.webp';
+    Var.themeMobileBtn.src = 'assets/img/icons-sun.webp';
 };
 
 function disableLightMode() {
-    document.body.classList.remove('light');
     lightMode = localStorage.setItem('light', null);
-    themeBtn.src = 'assets/img/icons-moon.webp';
-    themeMobileBtn.src = 'assets/img/icons-moon.webp';
+    Var.body.className = 'dark';
+    Var.themeBtn.src = 'assets/img/icons-moon.webp';
+    Var.themeMobileBtn.src = 'assets/img/icons-moon.webp';
 }
 
 export { enableLightMode, disableLightMode };

@@ -134,19 +134,23 @@ function documentReady(){
         }
         
         else if(elClass.contains('theme') || elClass.contains('theme-mobile')) {
-            // change the src, set the theme, and save the theme to localstorage 
-            if(target.getAttribute('src') == 'assets/img/icons-moon.webp'){
-                Var.themeBtn.classList.remove('dark');
-                Var.themeBtn.classList.add('light');
-                Var.themeMobileBtn.classList.remove('dark');
-                Var.themeMobileBtn.classList.add('light');
-                enableLightMode();
+             // change the src, set the theme, and save the theme to localstorage 
+             if(Var.body.classList.contains('dark')){
+                 enableLightMode();
+                // Var.themeBtn.src = 'assets/img/icons-sun.webp';
+                // Var.themeMobileBtn.src = 'assets/img/icons-sun.webp';
+                // Var.themeBtn.classList.remove('dark');
+                // Var.themeBtn.classList.add('light');
+                // Var.themeMobileBtn.classList.remove('dark');
+                // Var.themeMobileBtn.classList.add('light');
             } else {
-                Var.themeBtn.classList.remove('light');
-                Var.themeBtn.classList.add('dark');
-                Var.themeMobileBtn.classList.remove('light');
-                Var.themeMobileBtn.classList.add('dark');
                 disableLightMode();
+                // Var.themeBtn.src = 'assets/img/icons-moon.webp';
+                // Var.themeMobileBtn.src = 'assets/img/icons-moon.webp';
+                // Var.themeBtn.classList.remove('light');
+                // Var.themeBtn.classList.add('dark');
+                // Var.themeMobileBtn.classList.remove('light');
+                // Var.themeMobileBtn.classList.add('dark');
             }
         } 
 
