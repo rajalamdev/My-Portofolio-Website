@@ -565,6 +565,12 @@ main aside article {
     flex-direction: column;
 }
 
+main aside article .me {
+    border-radius: 50%;
+    border: 5px solid var(--light-blue);
+    padding: 6px;
+}
+
 main aside article img {
     transition: .3s;
     margin: 4em 40px;
@@ -768,8 +774,9 @@ main .contact ul li a:hover span {
 main .contact ul li a img {
     height: auto;
     width: 100%;
-    filter: drop-shadow(3px 3px 0 var(--heading-color));
     transition: .3s;
+    -webkit-filter: drop-shadow(3px 3px 0 var(--content-color));
+    filter: drop-shadow(3px 3px 0 var(--content-color));
 }
 
 main .contact ul li a span {
