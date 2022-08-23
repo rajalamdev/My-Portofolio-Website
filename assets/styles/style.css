@@ -112,6 +112,7 @@ body {
     text-shadow: 0 0 3px rgba(0,0,0,0.3);
     background-color: rgb(41, 130, 175);
 }
+
 /* ------------------------------------ achievements -------------------------------------------- */
 .achievements {
     cursor: pointer;
@@ -148,17 +149,21 @@ body {
     gap: 20px;
 }
 
+.main-achievements .container-achievements li {
+    overflow: hidden;
+}
+
 .main-achievements .container-achievements li img {
     width: 400px;
     height: 300px;
     max-width: 100%;
     border-radius: 5px;
     border: 3px groove var(--light-blue);
-    filter: drop-shadow(0 0 1px var(--heading-color));
+    filter: drop-shadow(0 0 1px var(--heading-color)) grayscale(100%) blur(5px);
     padding: 5px;
     cursor: zoom-in;
     transform: scale(1);
-    transition: .2s;
+    transition: .3s;
 }
 
 .main-achievements .container-achievements li img:hover {
@@ -561,8 +566,10 @@ main aside article {
 }
 
 main aside article img {
+    transition: .3s;
     margin: 4em 40px;
     max-width: 314px;
+    filter: blur(3px);
 }
 
 main aside article section h3 {
@@ -669,9 +676,10 @@ main .projects section figure img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 5px;
-    filter: drop-shadow(0 0 1px var(--heading-color));
+    filter: drop-shadow(0 0 1px var(--heading-color)) blur(3px);
     border: 1px solid var(--light-blue);
     padding: 5px;
+    transition: all 3s;
 }
 
 main .projects section figure .view {

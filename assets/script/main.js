@@ -1,5 +1,6 @@
 import { enableLightMode, disableLightMode } from "../modules/theme.mjs";
 import * as Var from "../modules/variable.mjs";
+import { callback, options, observer } from "../modules/blur.mjs";
 
 window.addEventListener('load', () => {
     // my age
@@ -206,3 +207,4 @@ Var.anchorMobile.forEach(anchor => {
         Var.menu.classList.remove('open');
     })
 })
+  
