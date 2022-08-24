@@ -193,7 +193,7 @@ function documentReady(){
             Var.downloadBtn.href = target.src;
         }
 
-        else if(elClass.contains('close-modal-btn')){
+        else if(elClass.contains('close-modal-btn') || elClass.contains('fa-xmark')){
             Var.modal.style.display = "none";
         }
     });
