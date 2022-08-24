@@ -149,10 +149,6 @@ body {
     gap: 20px;
 }
 
-.main-achievements .container-achievements li {
-    overflow: hidden;
-}
-
 .main-achievements .container-achievements li img {
     width: 400px;
     height: 300px;
@@ -192,14 +188,47 @@ body {
     padding: 10px;
     margin: auto;
     align-items: center;
+    justify-content: center;
 }
+
+.main-achievements .modal .container-img .download-btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--glass-effect);
+    padding: 5px 30px;
+    border: 2px solid var(--heading-color);
+    color: var(--heading-color);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 999;
+    top: -37px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.main-achievements .modal .container-img .download-btn:hover {
+    opacity: .8;
+}
+
 
 .main-achievements .modal .container-img .close-modal-btn {
     position: absolute;
-    right: 20px;
-    top: -15px;
+    right: 15px;
+    top: -33px;
     color: var(--white);
+    z-index: 999;
     cursor: pointer;
+    border: 2px solid var(--heading-color);
+    background-color: var(--glass-effect);
+    padding: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-achievements .modal .container-img .close-modal-btn:hover {

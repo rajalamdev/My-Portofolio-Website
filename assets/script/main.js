@@ -190,6 +190,7 @@ function documentReady(){
         else if(elClass.contains('achieve-img')){
             Var.modal.style.display = "block";
             Var.modalImg.src = target.src;
+            Var.downloadBtn.href = target.src;
         }
 
         else if(elClass.contains('close-modal-btn')){
