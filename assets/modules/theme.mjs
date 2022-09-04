@@ -9,8 +9,12 @@ if(lightMode == 'enabled'){
 function enableLightMode() {
     lightMode = localStorage.setItem('light', 'enabled');
     Var.body.className = 'light';
-    Var.themeBtn.src = 'assets/img/icons-sun.webp';
-    Var.themeMobileBtn.src = 'assets/img/icons-sun.webp';
+    try {
+        Var.themeBtn.src = 'assets/img/icons-sun.webp';
+        Var.themeMobileBtn.src = 'assets/img/icons-sun.webp';
+    } catch (error) {
+        return error;
+    }
 };
 
 function disableLightMode() {
