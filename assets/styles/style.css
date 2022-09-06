@@ -15,7 +15,7 @@ html {
 
 /* dark mode */
 :root {
-    --background: rgb(9, 16, 32);
+    --background: rgb(17, 26, 48);
     --heading-color: rgb(238, 238, 238);
     --content-color: rgb(171, 187, 211);
     --light-blue: rgb(17, 188, 255);
