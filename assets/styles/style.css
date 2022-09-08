@@ -592,17 +592,29 @@ main aside article {
     flex-direction: column;
 }
 
-main aside article .me {
+main aside article .profile {
     border-radius: 50%;
     border: 5px solid var(--light-blue);
     padding: 6px;
+    transition: .3s;
+    margin: 3.5em auto 0 auto;
+    width: 312px;
+    height: 312px;
+    overflow: hidden;
 }
 
-main aside article img {
-    transition: .3s;
-    margin: 4em 40px;
-    max-width: 314px;
+main aside article .me {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     filter: blur(3px);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+main aside article .me:hover {
+    content: url("../img/me-color.png");
 }
 
 main aside article section h3 {
@@ -611,14 +623,12 @@ main aside article section h3 {
 }
 
 main aside article:nth-child(1) {
-    min-width: 35%;
-    max-width: 100%;
+    flex: 1;
 }
 
 main aside article:nth-child(2) {
     padding-top: 50px;
-    min-width: 65%;
-    max-width: 100%;
+    flex: 2;
 }
 
 main aside article section:nth-child(1),
@@ -1107,12 +1117,6 @@ footer .github i {
         flex-direction: column;
     }
 
-    main aside article img {
-        height: auto;
-        width: 50%;
-        margin: 60px auto 0 auto;
-    }
-
     footer {
         padding: 30px 40px;
     }
@@ -1163,10 +1167,9 @@ footer .github i {
 }
 
 @media screen and (max-width: 480px){
-    main aside article img {
-        height: auto;
-        width: 60%;
-        margin: 60px auto 0 auto;
+    main aside article .profile {
+        width: 204px;
+        height: 204px;
     }
 
     main aside {
