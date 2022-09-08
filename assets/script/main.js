@@ -199,6 +199,14 @@ function documentReady(){
     });
 }
 
+Var.profile.addEventListener("mouseover", () => {
+    Var.profile.src = "assets/img/me-color.png"
+})
+
+Var.profile.addEventListener("mouseleave", () => {
+    Var.profile.src = "assets/img/me-darken.jpeg"
+})
+
 Var.anchorMobile.forEach(anchor => {
     anchor.addEventListener('click', () => {
         Var.header.classList.remove('hidden')

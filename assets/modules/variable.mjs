@@ -29,12 +29,13 @@ const sidebarBg = document.querySelector('.sidebar-bg');
 const logos = document.querySelector('header .logos');
 const achievements = document.querySelector('.achievements');
 const anchorMobile = document.querySelectorAll('.anchor-mobile');
-const downloadBtn = document.querySelector('.download-btn')
+const downloadBtn = document.querySelector('.download-btn');
+const profile = document.querySelector(".me");
 
 export { 
     body, header, navbar, menu, sidebar, themeBtn, themeMobileBtn, navLinks,
     section, jump, alert, closeBtn, understand, today, detailsBtn,
     detailsSection, arrowIconUp, arrowIconDown, projects, modal, closeModalBtn, modalImg,
     clientWidth, clientHeight, copyrightYear, sidebarBg, logos, achievements, anchorMobile,
-    downloadBtn
+    downloadBtn, profile
 }

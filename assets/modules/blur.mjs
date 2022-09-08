@@ -1,7 +1,7 @@
 function callback(entries){
     entries.forEach(entry => {
         if(entry.isIntersecting){
-            entry.target.style.filter = 'blur(0px) grayscale(0)';
+            entry.target.style.filter = 'blur(0px)';
         }
     })
 }
