@@ -2,6 +2,14 @@ import { enableLightMode, disableLightMode } from "../modules/theme.mjs";
 import * as Var from "../modules/variable.mjs";
 import { callback, options, observer } from "../modules/blur.mjs";
 
+Var.profile.addEventListener("mouseover", () => {
+    Var.profile.src = "assets/img/me-color.webp"
+})
+
+Var.profile.addEventListener("mouseleave", () => {
+    Var.profile.src = "assets/img/me-darken.webp"
+})
+
 window.addEventListener('load', () => {
     // my age
     const myAge = document.getElementById('my-age');
@@ -198,14 +206,6 @@ function documentReady(){
         }
     });
 }
-
-Var.profile.addEventListener("mouseover", () => {
-    Var.profile.src = "assets/img/me-color.webp"
-})
-
-Var.profile.addEventListener("mouseleave", () => {
-    Var.profile.src = "assets/img/me-darken.webp"
-})
 
 Var.anchorMobile.forEach(anchor => {
     anchor.addEventListener('click', () => {
