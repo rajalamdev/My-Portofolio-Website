@@ -200,11 +200,11 @@ function documentReady(){
 }
 
 Var.profile.addEventListener("mouseover", () => {
-    Var.profile.src = "assets/img/me-color.png"
+    Var.profile.src = "assets/img/me-color.webp"
 })
 
 Var.profile.addEventListener("mouseleave", () => {
-    Var.profile.src = "assets/img/me-darken.jpeg"
+    Var.profile.src = "assets/img/me-darken.webp"
 })
 
 Var.anchorMobile.forEach(anchor => {
