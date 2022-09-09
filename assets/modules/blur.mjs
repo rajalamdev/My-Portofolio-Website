@@ -1,6 +1,9 @@
 function callback(entries){
     entries.forEach(entry => {
         if(entry.isIntersecting){
+            if(entry.target.classList.contains("contact-img")){
+                return;
+            }
             entry.target.style.filter = 'blur(0px)';
         }
     })

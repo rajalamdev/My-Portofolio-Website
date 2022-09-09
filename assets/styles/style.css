@@ -27,11 +27,12 @@ html {
     --sidebar: rgb(17, 26, 48);
     --pure: white;
     --glass-effect: rgba(15, 23, 42, .8);
+    --alert: rgb(14, 21, 39);
 }
 
 /* light mode */
 body.light {
-    --background: aliceblue;
+    --background: rgb(240, 248, 255);
     --heading-color: rgb(51, 51, 51);
     --content-color: rgb(51, 51, 51);
     --light-blue: rgb(52, 179, 241);
@@ -42,6 +43,7 @@ body.light {
     --sidebar: aliceblue;
     --pure: black;
     --glass-effect: rgba(240, 248, 255, .8);
+    --alert: rgb(239, 247, 255);
 }
 
 ::selection {
@@ -709,7 +711,7 @@ main .projects section figure figcaption {
 }
 
 main .projects section figure img {
-    width: 700px;
+    width: 600px;
     height: auto;
     max-width: 100%;
     max-height: 100%;
@@ -836,7 +838,6 @@ footer .github span {
 
 footer .github:hover span{
     color: var(--heading-color);
-    -webkit-text-stroke: .5px var(--heading-color);
 }
 
 footer .github i {
@@ -879,14 +880,14 @@ footer .github i {
     left: 0;
     right: 0;
     z-index: 9999;
-    background-color: var(--heading-color);
+    background-color: var(--alert);
     color: var(--border-nav);
     padding: 20px;
     font-size: 1.1em;
     transition: .6s;
     opacity: 0;
-    color: var(--background);
-    border-bottom: 1px solid var(--heading-color);
+    color: var(--heading-color);
+    border-bottom: 1px solid var(--border-nav);
 }
 
 .alert.reveal {
@@ -1121,14 +1122,16 @@ footer .github i {
     }
 }
 
-@media screen and (max-width: 665px){
-    .main-achievements .modal {
-        padding-top: 140px;
-    }
-
+@media screen and (max-width: 768px){
     main .contact ul{
         flex-wrap: wrap;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 665px){
+    .main-achievements .modal {
+        padding-top: 140px;
     }
 
     .alert {
