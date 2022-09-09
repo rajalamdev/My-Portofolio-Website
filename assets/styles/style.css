@@ -28,6 +28,7 @@ html {
     --pure: white;
     --glass-effect: rgba(15, 23, 42, .8);
     --alert: rgb(14, 21, 39);
+    --bg-circle: rgb(36, 45, 65);
 }
 
 /* light mode */
@@ -44,6 +45,7 @@ body.light {
     --pure: black;
     --glass-effect: rgba(240, 248, 255, .8);
     --alert: rgb(239, 247, 255);
+    --bg-circle: #eee;
 }
 
 ::selection {
@@ -571,7 +573,7 @@ main .links a:hover {
 /* ------------------------------------------- aside / about me (main) --------------------------------------------- */
 main aside {
     display: flex;
-    padding-bottom: 120px;
+    padding-bottom: 100px;
 }
 
 main h2 {
@@ -651,12 +653,18 @@ main aside article section ul li {
     flex-direction: column;
     position: relative;
     transition: .2s;
+    padding: 8px;
+    background-color: var(--bg-circle);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
 }
 
 
 main aside article section ul li img{
     cursor: pointer;
-    width: 38px;
+    width: 80%;
+    height: 80%;
     margin: 0;
     transition: .2s;
 }
@@ -672,9 +680,10 @@ main aside article section ul li span {
     transform: scale(0);
 }
 
-main aside article section ul li:hover img {
-    transform: scale(1.2);
+main aside article section ul li:hover {
+    transform: scale(1.15);
     filter: opacity(.6);
+    cursor: pointer;
 }
 
 main aside article section ul li:hover span {
@@ -719,7 +728,6 @@ main .projects section figure img {
     filter: drop-shadow(0 0 1px var(--heading-color)) blur(3px);
     border: 1px solid var(--light-blue);
     padding: 5px;
-    transition: all 3s;
 }
 
 main .projects section figure .view {
