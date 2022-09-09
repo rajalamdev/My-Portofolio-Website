@@ -101,9 +101,20 @@ body {
 }
 
 /* other element */
+body.dark .btn {
+    padding: 10px 20px;
+    background-image: linear-gradient(100deg, var(--light-blue) 0%, rgb(0, 217, 255) 100%);
+    border-radius: 7px;
+    transition: .15s;
+    color: var(--white);
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .6);
+    transition: .3s;
+}
+
 .btn {
     padding: 10px 20px;
-    background-color: var(--light-blue);
+    background: var(--light-blue);
     border-radius: 7px;
     transition: .15s;
     color: var(--white);
@@ -124,20 +135,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(90deg, rgb(0, 130, 216) 0%, var(--light-blue) 100%);
+    background-image: linear-gradient(90deg, var(--light-blue) 0%, rgb(0, 217, 255) 100%);
     z-index: -1;
     transition: opacity .2s;
 }
 
 .achievements:hover {
-    opacity: .8;
+    opacity: .85;
 }
 
-.achievements p {
+
+.achievements span {
     color: var(--white);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, .6);
     font-size: 14px;
     font-weight: 600;
+    position: relative;
+}
+
+.achievements span::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--heading-color);
+    transition: 300ms;
+    width: 0;
+}
+
+.achievements:hover span::after {
+    width: 100%;
 }
 
 .main-achievements {
@@ -516,6 +545,13 @@ main span {
     color: var(--light-blue);
 }
 
+body.dark main .jumbotron span,
+body.dark main aside span {
+    background-image: linear-gradient(90deg, var(--light-blue) 0%, #72FFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* jumbotron */
 main .jumbotron.section {
     text-align: center;
@@ -524,7 +560,7 @@ main .jumbotron.section {
     margin: auto;
 }
 
-main .jumbotron .say-hello{
+main .jumbotron .say-hello {
     margin: auto;
     width: max-content;
     font-weight: 600;
@@ -532,11 +568,21 @@ main .jumbotron .say-hello{
     color: var(--light-blue);
 }
 
+body.dark main .jumbotron .say-hello{
+    margin: auto;
+    width: max-content;
+    font-weight: 600;
+    font-size: 24px;
+    background-image: linear-gradient(90deg, #72FFFF 0%, var(--light-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 main .jumbotron h1 {
-    color: var(--heading-color);
     line-height: 55px;
     font-size: 46px;
     margin: 0 0 20px 0;
+    color: var(--heading-color);
 }
 
 @keyframes reveal {
@@ -567,7 +613,11 @@ main .links a {
     transition: .3s;
 }
 
-main .links a:hover {
+main .links li {
+    cursor: pointer;
+}
+
+main .links li:hover a {
     transform: translateY(-10px);
 }
 /* ------------------------------------------- aside / about me (main) --------------------------------------------- */
