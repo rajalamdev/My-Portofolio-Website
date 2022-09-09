@@ -597,7 +597,7 @@ main aside article .profile {
     border: 5px solid var(--light-blue);
     padding: 6px;
     transition: .3s;
-    margin: 3.5em auto 0 auto;
+    margin: 3.5em 1em 0 auto;
     width: 312px;
     height: 312px;
     overflow: hidden;
@@ -1110,6 +1110,10 @@ footer .github i {
 
     main aside {
         flex-direction: column;
+    }
+
+    main aside article .profile {
+        margin: 3em auto 0 auto;
     }
 
     footer {
