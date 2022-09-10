@@ -720,7 +720,7 @@ main aside article section ul li .skill-text {
     background-image: none;
     -webkit-text-fill-color: var(--content-color);
     z-index: -1;
-    bottom: -30px;
+    bottom: -25px;
     text-align: center;
     transition: .2s;
     font-size: 14px;
