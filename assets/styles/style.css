@@ -19,6 +19,7 @@ html {
     --heading-color: rgb(238, 238, 238);
     --content-color: rgb(171, 187, 211);
     --light-blue: rgb(17, 188, 255);
+    --gradient: linear-gradient(90deg, var(--light-blue) 0%, rgb(89, 208, 255) 50%, rgb(49, 224, 255) 100%);;
     --white: rgb(255, 255, 255);
     --grey: rgb(148, 163, 184);
     --border-nav: rgba(29, 37, 55, .8);
@@ -29,6 +30,7 @@ html {
     --glass-effect: rgba(15, 23, 42, .8);
     --alert: rgb(14, 21, 39);
     --bg-circle: rgb(36, 45, 65);
+    --btn-gradient: linear-gradient(100deg, var(--light-blue) 0%, rgb(0, 217, 255) 100%);
 }
 
 /* light mode */
@@ -37,6 +39,7 @@ body.light {
     --heading-color: rgb(51, 51, 51);
     --content-color: rgb(51, 51, 51);
     --light-blue: rgb(52, 179, 241);
+    --gradient: linear-gradient(90deg, var(--light-blue) 0%, var(--light-blue) 100%);
     --grey: rgb(148, 163, 184);
     --border-nav: rgba(221, 221, 221, .8);
     --primary-color: rgb(221, 221, 221);
@@ -46,6 +49,7 @@ body.light {
     --glass-effect: rgba(240, 248, 255, .8);
     --alert: rgb(239, 247, 255);
     --bg-circle: #eee;
+    --btn-gradient: linear-gradient(100deg, var(--light-blue) 0%, var(--light-blue) 100%);
 }
 
 ::selection {
@@ -541,13 +545,9 @@ main {
     margin: 70px 120px 0 120px;
 }
 
-main span {
-    color: var(--light-blue);
-}
-
-body.dark main .jumbotron span,
-body.dark main aside span {
-    background-image: linear-gradient(90deg, var(--light-blue) 0%, #72FFFF 100%);
+main .jumbotron span,
+main aside span {
+    background-image: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -560,20 +560,12 @@ main .jumbotron.section {
     margin: auto;
 }
 
-main .jumbotron .say-hello {
+main .jumbotron .say-hello{
     margin: auto;
     width: max-content;
     font-weight: 600;
     font-size: 24px;
-    color: var(--light-blue);
-}
-
-body.dark main .jumbotron .say-hello{
-    margin: auto;
-    width: max-content;
-    font-weight: 600;
-    font-size: 24px;
-    background-image: linear-gradient(90deg, #72FFFF 0%, var(--light-blue) 100%);
+    background-image: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -655,6 +647,7 @@ main aside article .profile {
     width: 312px;
     height: 312px;
     overflow: hidden;
+    position: relative;
 }
 
 main aside article .me {
@@ -665,6 +658,8 @@ main aside article .me {
     filter: blur(3px);
     cursor: pointer;
 }
+
+
 
 main aside article section h3 {
     color: var(--heading-color);
@@ -719,9 +714,10 @@ main aside article section ul li img{
     transition: .2s;
 }
 
-main aside article section ul li span {
+main aside article section ul li .skill-text {
     position: absolute;
-    color: var(--content-color);
+    background-image: none;
+    -webkit-text-fill-color: var(--content-color);
     z-index: -1;
     bottom: -30px;
     text-align: center;
@@ -808,13 +804,8 @@ main .projects .details-btn {
     width: 140px;
     height: 40px;
     font-size: 14px;
-    border-radius: 7px;
-    background-color: var(--light-blue);
-    border: none;
     font-weight: 600;
     margin-top: 20px;
-    color: var(--white);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, .6);
 }
 
 main .projects .details-btn i {
