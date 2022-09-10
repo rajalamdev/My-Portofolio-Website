@@ -19,12 +19,13 @@ html {
     --heading-color: rgb(238, 238, 238);
     --content-color: rgb(171, 187, 211);
     --light-blue: rgb(17, 188, 255);
-    --gradient: linear-gradient(90deg, var(--light-blue) 0%, rgb(89, 208, 255) 50%, rgb(49, 224, 255) 100%);;
+    --gradient: linear-gradient(90deg, var(--light-blue) 0%, rgb(89, 208, 255) 50%, rgb(49, 224, 255) 100%);
     --white: rgb(255, 255, 255);
     --grey: rgb(148, 163, 184);
     --border-nav: rgba(29, 37, 55, .8);
     --primary-color: rgb(50, 62, 88);
     --jump-btn: rgb(36, 45, 65);
+    --selection: rgb(36, 45, 65);
     --sidebar: rgb(17, 26, 48);
     --pure: white;
     --glass-effect: rgba(15, 23, 42, .8);
@@ -44,6 +45,7 @@ body.light {
     --border-nav: rgba(221, 221, 221, .8);
     --primary-color: rgb(221, 221, 221);
     --jump-btn: rgb(52, 179, 241);
+    --selection: rgb(177, 191, 204);
     --sidebar: aliceblue;
     --pure: black;
     --glass-effect: rgba(240, 248, 255, .8);
@@ -165,7 +167,7 @@ body.dark .btn {
     left: 0;
     right: 0;
     height: 3px;
-    background-color: var(--heading-color);
+    background-color: var(--white);
     transition: 300ms;
     width: 0;
 }
@@ -310,6 +312,42 @@ header .logos {
     z-index: -999;
     transition: .1s;
     transition-delay: .2s;
+    position: relative;
+}
+
+header .logos::before {
+    display: block;
+    position: absolute;
+    content: 'ラジ・アラム';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: .3s;
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header .logos:hover::before {
+    width: 100%;
+}
+
+header .logos::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    background-color: var(--light-blue);
+    height: 2px;
+    transition: .3s;
+}
+
+header .logos:hover::after {
+    width: 100%;
 }
 
 header .logos.hidden {
@@ -553,6 +591,13 @@ main aside span {
     -webkit-text-fill-color: transparent;
 }
 
+main .jumbotron span::selection,
+main aside span::selection {
+    background-color: var(--light-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--selection);
+}
+
 /* jumbotron */
 main .jumbotron.section {
     text-align: center;
@@ -727,6 +772,10 @@ main aside article section ul li .skill-text {
     transform: scale(0);
 }
 
+main aside article section ul li .skill-text::selection {
+    -webkit-text-fill-color: var(--heading-color);
+}
+
 main aside article section ul li:hover {
     transform: scale(1.15);
     filter: opacity(.6);
@@ -876,7 +925,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 30px 120px;
-    font-size: .8em;
+    font-size: .85em;
     box-shadow: 0 0 3px 1px var(--border-nav);
 }
 
@@ -884,10 +933,26 @@ footer .github span {
     margin-left: 10px;
     color: var(--content-color);
     transition: .2s;
+    position: relative;
+}
+
+footer .github span::after {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--light-blue);
+    transition: .3s;
 }
 
 footer .github:hover span{
     color: var(--heading-color);
+}
+
+footer .github:hover span::after {
+    width: 100%;
 }
 
 footer .github i {
