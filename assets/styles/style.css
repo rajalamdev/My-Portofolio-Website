@@ -623,6 +623,11 @@ main .jumbotron h1 {
     color: var(--heading-color);
 }
 
+main .jumbotron .say-hello::selection {
+    background-color: var(--light-blue);
+    -webkit-text-fill-color: var(--selection);
+}
+
 @keyframes reveal {
     1%{opacity: 0;}
     100%{opacity: 1;}
@@ -642,11 +647,12 @@ main .btn.follow:hover {
 main .links {
     display: flex;
     justify-content: center;
+    gap: 30px;
 }
 
 main .links a {
     color: var(--heading-color);
-    margin: 40px 20px;
+    margin: 40px 0;
     display: inline-block;
     transition: .3s;
 }
@@ -1325,6 +1331,7 @@ footer .github i {
 @media screen and (max-width: 400px){
     main .jumbotron h1 {
         font-size: 28px;
+        margin-bottom: 10px;
     }
 
     main .jumbotron.section {
@@ -1342,5 +1349,6 @@ footer .github i {
 
     main .jumbotron .subtitle {
         font-size: 16px;
+        margin-bottom: 30px;
     }
 }
