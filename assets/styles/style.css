@@ -1324,10 +1324,19 @@ footer .github i {
 
 @media screen and (max-width: 400px){
     main .jumbotron h1 {
-        font-size: 25px;
+        font-size: 28px;
+    }
+
+    main .jumbotron.section {
+        text-align: left;
+    }
+
+    main .links {
+        justify-content: start;
     }
 
     main .jumbotron .say-hello {
+        margin: 0;
         font-size: 18px;
     }
 
